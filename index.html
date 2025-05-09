@@ -511,7 +511,98 @@ function shuffle(array) {
 // Panggil saat halaman dimuat
 generateSoal();
 
+</section>
+  <section id="latihan5">
+  <h2>🧠 Latihan 5 Soal Dinamis</h2>
+  <p>Kerjakan soal berikut. Klik "Cek Jawaban" untuk mengetahui pembahasan.</p>
+
+  <div id="soal-container"></div>
+</section>
+<script>
+function generateSingleSoal(index) {
+  const x = Math.floor(Math.random() * 4 + 2);  // 2–5
+  const y = Math.floor(Math.random() * 4 + 1);  // 1–4
+  const a = x + y;
+  const b = x - y;
+  const jawabanX = (a + b) / 2;
+  const jawabanY = a - jawabanX;
+  const correct = `x = ${jawabanX}, y = ${jawabanY}`;
+
+  const opsi = shuffle([
+    `x = ${jawabanX}, y = ${jawabanY}`,
+    `x = ${jawabanX + 1}, y = ${jawabanY - 1}`,
+    `x = ${jawabanX - 1}, y = ${jawabanY + 1}`,
+    `x = ${jawabanY}, y = ${jawabanX}`
+  ]);
+
+  // Buat blok soal HTML
+  const container = document.createElement("div");
+  container.className = "quiz";
+  container.innerHTML = `
+    <p><strong>Soal ${index + 1}:</strong><br>
+    Diketahui SPLDV:<br>
+    x + y = ${a}<br>
+    x - y = ${b}<br>
+    Tentukan nilai x dan y!</p>
+    ${opsi.map((text, i) => `
+      <label><input type="radio" name="q${index}" data-value="${text}"> ${String.fromCharCode(65 + i)}. ${text}</label><br>
+    `).join("")}
+    <button onclick="cekJawaban(${index}, '${correct}')">Cek Jawaban</button>
+    <p id="feedback${index}" class="feedback"></p>
+  `;
+
+  document.getElementById("soal-container").appendChild(container);
+}
+
+function generate5Soal() {
+  document.getElementById("soal-container").innerHTML = "";
+  for (let i = 0; i < 5; i++) {
+    generateSingleSoal(i);
+  }
+}
+
+function cekJawaban(index, correct) {
+  const radios = document.getElementsByName("q" + index);
+  let selected = null;
+  for (let r of radios) {
+    if (r.checked) selected = r.getAttribute("data-value");
+  }
+
+  const feedback = document.getElementById("feedback" + index);
+  if (!selected) {
+    feedback.textContent = "⚠️ Pilih salah satu jawaban dulu.";
+    feedback.style.color = "orange";
+    return;
+  }
+
+  if (selected === correct) {
+    feedback.innerHTML = "✅ Jawaban benar!<br>Langkah:<br>" +
+      "Jumlahkan: <code>2x = a + b</code> → <code>x = (a + b)/2</code><br>" +
+      "Kemudian <code>y = a - x</code>";
+    feedback.style.color = "green";
+  } else {
+    feedback.innerHTML = "❌ Jawaban salah.<br>Pembahasan:<br>" +
+      "Gunakan eliminasi:<br>" +
+      "<code>x + y = a</code> dan <code>x - y = b</code><br>" +
+      "Jumlahkan: <code>2x = a + b</code> → <code>x = (a + b)/2</code><br>" +
+      "Kemudian <code>y = a - x</code>";
+    feedback.style.color = "red";
+  }
+}
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// Panggil saat halaman dimuat
+generate5Soal();
+  
 </script>
+  
 
 </body>
 </html>
