@@ -5,93 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Media Pembelajaran SPLDV - Kelas 8 SMP</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f5f7fa;
-    }
-
-    header {
-      background-color: #34495e;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #2ecc71;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      background: white;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    h2 {
-      color: #2c3e50;
-    }
-
-    .accordion {
-      cursor: pointer;
-      background-color: #ecf0f1;
-      padding: 10px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 16px;
-      width: 100%;
-      margin: 5px 0;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
-
-    .accordion:hover {
-      background-color: #d0d7de;
-    }
-
-    .panel {
-      padding: 10px 15px;
-      display: none;
-      background-color: #f9f9f9;
-      border-left: 4px solid #2ecc71;
-      margin-bottom: 10px;
-    }
-
-    .quiz {
-      margin-top: 15px;
-    }
-
-    .quiz label {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .footer {
-      text-align: center;
-      background-color: #bdc3c7;
-      padding: 15px;
-      margin-top: 30px;
-    }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f5f7fa; }
+    header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
+    nav { background-color: #27ae60; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    section { max-width: 900px; margin: auto; padding: 20px; background: white; margin-top: 20px; border-radius: 10px; }
+    h2 { color: #2c3e50; }
+    .accordion { cursor: pointer; background-color: #ecf0f1; padding: 10px; border: none; width: 100%; margin: 5px 0; border-radius: 6px; text-align: left; font-size: 16px; }
+    .accordion:hover { background-color: #d0d7de; }
+    .panel { padding: 10px 15px; display: none; background-color: #f9f9f9; border-left: 4px solid #2ecc71; margin-bottom: 10px; }
+    .quiz { margin-top: 15px; }
+    .quiz label { display: block; margin-bottom: 8px; }
+    .feedback { font-weight: bold; margin-top: 10px; }
+    .footer { text-align: center; background-color: #bdc3c7; padding: 15px; margin-top: 30px; }
+    pre { background: #f0f0f0; padding: 10px; border-radius: 5px; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Media Pembelajaran SPLDV</h1>
+  <h1>Media Pembelajaran: Sistem Persamaan Linear Dua Variabel (SPLDV)</h1>
   <p>Kelas 8 SMP</p>
 </header>
 
@@ -105,96 +38,89 @@
 <section id="tujuan">
   <h2>🎯 Tujuan Pembelajaran</h2>
   <ul>
-    <li>Memahami pengertian SPLDV.</li>
-    <li>Menguasai metode penyelesaian SPLDV.</li>
-    <li>Menerapkan SPLDV pada kehidupan sehari-hari.</li>
+    <li>Memahami pengertian dan bentuk umum SPLDV.</li>
+    <li>Menjelaskan langkah penyelesaian SPLDV dengan tiga metode.</li>
+    <li>Menyelesaikan SPLDV dari masalah kontekstual.</li>
+    <li>Mengembangkan keterampilan berpikir logis dan analitis.</li>
   </ul>
 </section>
 
 <section id="materi">
   <h2>📘 Materi SPLDV</h2>
-  <p>SPLDV adalah dua persamaan linear dengan dua variabel, contohnya:</p>
-  <pre>2x + 3y = 12
-x - y = 4</pre>
+  <p><strong>Definisi:</strong> Sistem Persamaan Linear Dua Variabel (SPLDV) adalah dua persamaan linear yang memiliki dua variabel. Penyelesaiannya adalah pasangan nilai (x, y) yang memenuhi kedua persamaan.</p>
+  
+  <p><strong>Bentuk Umum SPLDV:</strong></p>
+  <pre>
+ax + by = c
+dx + ey = f
+  </pre>
+
+  <p><strong>Langkah-langkah Penyelesaian:</strong></p>
 
   <button class="accordion">Metode Grafik</button>
   <div class="panel">
-    Gambar kedua persamaan di bidang kartesius. Titik potongnya adalah solusi SPLDV.
+    Gambar grafik dari kedua persamaan di bidang kartesius. Titik potong kedua garis adalah solusi SPLDV.
   </div>
 
   <button class="accordion">Metode Substitusi</button>
   <div class="panel">
-    Ubah salah satu persamaan menjadi x atau y, lalu masukkan ke persamaan lainnya.
+    - Ubah salah satu persamaan agar salah satu variabel (x atau y) berdiri sendiri.<br>
+    - Substitusi ke persamaan lain dan selesaikan.<br>
+    - Gunakan hasilnya untuk menentukan variabel lainnya.
   </div>
 
   <button class="accordion">Metode Eliminasi</button>
   <div class="panel">
-    Samakan koefisien variabel, lalu tambahkan/kurangkan untuk menghilangkan salah satu variabel.
+    - Samakan koefisien salah satu variabel.<br>
+    - Kurangkan atau tambahkan kedua persamaan.<br>
+    - Tentukan nilai satu variabel, kemudian substitusi ke salah satu persamaan untuk menentukan variabel lain.
   </div>
 </section>
 
 <section id="contoh">
-  <h2>🧠 Contoh Soal</h2>
-  <p>Pak Andi membeli 2 pensil dan 3 buku seharga Rp18.000. Bu Rina membeli 1 pensil dan 2 buku seharga Rp11.000.</p>
-  <p><strong>Pertanyaan:</strong> Berapa harga satu pensil dan satu buku?</p>
-  <section id="contoh2">
-  <h2>🧩 Contoh Soal</h2>
-  <p>Siti membeli 3 pensil dan 2 penghapus seharga Rp9.000. Rudi membeli 2 pensil dan 4 penghapus seharga Rp8.000.</p>
-  <p><strong>Pertanyaan:</strong> Berapa harga 1 pensil dan 1 penghapus?</p>
+  <h2>🧠 Contoh Soal dan Pembahasan</h2>
+  <p>Seorang pedagang menjual 2 kg apel dan 3 kg jeruk seharga Rp40.000. Pedagang lain menjual 1 kg apel dan 4 kg jeruk seharga Rp35.000.</p>
+  <p><strong>Pertanyaan:</strong> Berapa harga 1 kg apel dan 1 kg jeruk?</p>
   <p><strong>Penyelesaian:</strong></p>
   <pre>
 Misal:
-x = harga pensil
-y = harga penghapus
+x = harga 1 kg apel
+y = harga 1 kg jeruk
 
 Persamaan:
-3x + 2y = 9000 ...(1)
-2x + 4y = 8000 ...(2)
+2x + 3y = 40000  ...(1)
+x  + 4y = 35000  ...(2)
 
-Kalikan (1) dengan 2: 6x + 4y = 18000
-(2): 2x + 4y = 8000
+Eliminasi persamaan (1) dan (2):
+Kalikan (2) dengan 2: 2x + 8y = 70000
+Kurangkan (1): (2x + 8y) - (2x + 3y) = 70000 - 40000
+⇒ 5y = 30000 → y = 6000
 
-Kurangkan: (6x + 4y) - (2x + 4y) = 18000 - 8000
-⇒ 4x = 10000 → x = 2500
+Substitusi ke (2): x + 4(6000) = 35000 → x = 11000
 
-Substitusi ke (1): 3(2500) + 2y = 9000 → 7500 + 2y = 9000 → y = 750
-
-<strong>Jawaban:</strong> Pensil = Rp2.500, Penghapus = Rp750
+<strong>Jawaban:</strong> Harga apel = Rp11.000/kg, jeruk = Rp6.000/kg
   </pre>
 </section>
 
 <section id="latihan">
-  <h2>🎯 Latihan</h2>
-  <p id="dynamic-soal">Memuat soal...</p>
-  <div class="quiz">
-    <label><input type="radio" name="q2" value="a"> A. </label>
-    <label><input type="radio" name="q2" value="b"> B. </label>
-    <label><input type="radio" name="q2" value="c"> C. </label>
-    <label><input type="radio" name="q2" value="d"> D. </label>
-    <button onclick="checkDynamic()">Cek Jawaban</button>
-    <p id="dynamic-feedback" class="feedback"></p>
-  </div>
-</section>
+  <h2>📝 Latihan Interaktif</h2>
 
-<section id="latihan">
-  <h2>📝 Latihan </h2>
-  <p><strong>Soal:</strong> Jika x + y = 10 dan x - y = 2, maka x = ...</p>
+  <p><strong>Soal:</strong> Diketahui SPLDV: <br>x + y = 10<br>x - y = 2</p>
   <div class="quiz">
-    <label><input type="radio" name="q1" value="8"> A. 8</label>
-    <label><input type="radio" name="q1" value="6"> B. 6</label>
-    <label><input type="radio" name="q1" value="5"> C. 5</label>
-    <label><input type="radio" name="q1" value="4"> D. 4</label>
+    <label><input type="radio" name="q1" value="a"> A. x = 8, y = 2</label>
+    <label><input type="radio" name="q1" value="b"> B. x = 6, y = 4</label>
+    <label><input type="radio" name="q1" value="c"> C. x = 5, y = 5</label>
+    <label><input type="radio" name="q1" value="d"> D. x = 4, y = 6</label>
     <button onclick="checkAnswer()">Cek Jawaban</button>
-    <p id="feedback"></p>
+    <p id="feedback" class="feedback"></p>
   </div>
 </section>
 
 <div class="footer">
-  &copy; 2025 | Media SPLDV oleh 8 SMP
+  &copy; 2025 Media Pembelajaran SPLDV | Disusun oleh Tim EduSMP
 </div>
 
 <script>
-  // Accordion logic
   const acc = document.querySelectorAll(".accordion");
   acc.forEach(button => {
     button.addEventListener("click", function () {
@@ -204,321 +130,30 @@ Substitusi ke (1): 3(2500) + 2y = 9000 → 7500 + 2y = 9000 → y = 750
     });
   });
 
-  // Quiz logic
   function checkAnswer() {
+    const feedback = document.getElementById("feedback");
     const radios = document.getElementsByName("q1");
-    let selected;
+    let selected = null;
     for (let r of radios) {
       if (r.checked) selected = r.value;
     }
-    const feedback = document.getElementById("feedback");
-    if (selected === "6") {
-      feedback.textContent = "✅ Jawaban benar! x = 6 dan y = 4.";
+
+    if (!selected) {
+      feedback.textContent = "❗Silakan pilih jawaban terlebih dahulu.";
+      feedback.style.color = "orange";
+      return;
+    }
+
+    if (selected === "b") {
+      feedback.innerHTML = "✅ Benar!<br>x = 6, y = 4 memenuhi kedua persamaan.";
       feedback.style.color = "green";
     } else {
-      feedback.textContent = "❌ Jawaban salah. Coba lagi!";
+      feedback.innerHTML = "❌ Salah. Coba periksa kembali substitusi dan eliminasi kedua persamaan.";
       feedback.style.color = "red";
     }
   }
-  // --- SOAL DINAMIS ---
-function generateSoal() {
-  const x = Math.floor(Math.random() * 4 + 1); // 1–4
-  const y = Math.floor(Math.random() * 4 + 1); // 1–4
-  const a = x + y;
-  const b = x - y;
-
-  const soalText = `Diketahui SPLDV:<br>x + y = ${a}<br>x - y = ${b}.<br>Nilai x dan y adalah ...`;
-  document.getElementById("dynamic-soal").innerHTML = soalText;
-
-  // Jawaban benar
-  const jawabanX = (a + b) / 2;
-  const jawabanY = a - jawabanX;
-
-  const pilihan = shuffle([
-    `x = ${jawabanX}, y = ${jawabanY}`,
-    `x = ${jawabanX + 1}, y = ${jawabanY - 1}`,
-    `x = ${jawabanX - 1}, y = ${jawabanY + 1}`,
-    `x = ${jawabanY}, y = ${jawabanX}`
-  ]);
-
-  const labels = document.getElementsByName("q2");
-  for (let i = 0; i < labels.length; i++) {
-    labels[i].nextSibling.textContent = ` ${String.fromCharCode(65 + i)}. ${pilihan[i]}`;
-    labels[i].setAttribute("data-value", pilihan[i]);
-  }
-
-  window.correctDynamic = `x = ${jawabanX}, y = ${jawabanY}`;
-}
-
-function checkDynamic() {
-  const radios = document.getElementsByName("q2");
-  let selected = null;
-  for (let r of radios) {
-    if (r.checked) selected = r.getAttribute("data-value");
-  }
-
-  const feedback = document.getElementById("dynamic-feedback");
-  if (!selected) {
-    feedback.textContent = "⚠️ Pilih jawaban terlebih dahulu.";
-    feedback.style.color = "orange";
-    return;
-  }
-
-  if (selected === window.correctDynamic) {
-    feedback.innerHTML = "✅ Jawaban benar!<br>Anda berhasil menyelesaikan SPLDV dengan metode eliminasi.";
-    feedback.style.color = "green";
-  } else {
-    feedback.innerHTML = `❌ Jawaban salah.<br><strong>Pembahasan:</strong><br>Gunakan eliminasi:
-x + y = a, x - y = b → x = (a + b)/2, y = a - x.`;
-    feedback.style.color = "red";
-  }
-}
-
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-generateSoal(); // Panggil saat load halaman
-  <script>
-// === SOAL DINAMIS DENGAN PEMBAHASAN ===
-
-function generateSoal() {
-  const x = Math.floor(Math.random() * 4 + 2);  // x antara 2–5
-  const y = Math.floor(Math.random() * 4 + 1);  // y antara 1–4
-  const a = x + y;
-  const b = x - y;
-
-  const soalText = `Diketahui SPLDV:<br><strong>x + y = ${a}</strong><br><strong>x - y = ${b}</strong><br>Tentukan nilai x dan y!`;
-  document.getElementById("dynamic-soal").innerHTML = soalText;
-
-  // Hitung jawaban benar
-  const jawabanX = (a + b) / 2;
-  const jawabanY = a - jawabanX;
-
-  // Simpan jawaban
-  window.correctDynamic = `x = ${jawabanX}, y = ${jawabanY}`;
-
-  // Buat opsi jawaban acak
-  const pilihan = shuffle([
-    `x = ${jawabanX}, y = ${jawabanY}`,                       // benar
-    `x = ${jawabanX + 1}, y = ${jawabanY - 1}`,
-    `x = ${jawabanX - 1}, y = ${jawabanY + 1}`,
-    `x = ${jawabanY}, y = ${jawabanX}`                        // jebakan
-  ]);
-
-  const radios = document.getElementsByName("q2");
-  for (let i = 0; i < radios.length; i++) {
-    radios[i].nextSibling.textContent = ` ${String.fromCharCode(65 + i)}. ${pilihan[i]}`;
-    radios[i].setAttribute("data-value", pilihan[i]);
-  }
-}
-
-function checkDynamic() {
-  const radios = document.getElementsByName("q2");
-  let selected = null;
-  for (let r of radios) {
-    if (r.checked) selected = r.getAttribute("data-value");
-  }
-
-  const feedback = document.getElementById("dynamic-feedback");
-
-  if (!selected) {
-    feedback.textContent = "⚠️ Silakan pilih jawaban terlebih dahulu.";
-    feedback.style.color = "orange";
-    return;
-  }
-
-  if (selected === window.correctDynamic) {
-    feedback.innerHTML = "✅ Jawaban benar!<br>Langkah:<br>" +
-      "<ul><li>Jumlahkan kedua persamaan: <code>2x = (x + y) + (x - y) = a + b</code></li>" +
-      `<li><code>x = (a + b) / 2 = ${window.correctDynamic.split(",")[0].split("=")[1]}</code></li>` +
-      `<li><code>y = a - x = ${window.correctDynamic.split(",")[1].split("=")[1]}</code></li></ul>`;
-    feedback.style.color = "green";
-  } else {
-    feedback.innerHTML = "❌ Jawaban salah.<br>" +
-      "Gunakan eliminasi:<br>" +
-      "<code>x + y = a</code> dan <code>x - y = b</code><br>" +
-      "Jumlahkan kedua persamaan: <code>2x = a + b → x = (a + b)/2</code><br>" +
-      "Kemudian <code>y = a - x</code>";
-    feedback.style.color = "red";
-  }
-}
-
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-// Panggil saat halaman dimuat
-generateSoal();
 
   <script>
-// === SOAL DINAMIS DENGAN PEMBAHASAN ===
-
-function generateSoal() {
-  const x = Math.floor(Math.random() * 4 + 2);  // x antara 2–5
-  const y = Math.floor(Math.random() * 4 + 1);  // y antara 1–4
-  const a = x + y;
-  const b = x - y;
-
-  const soalText = `Diketahui SPLDV:<br><strong>x + y = ${a}</strong><br><strong>x - y = ${b}</strong><br>Tentukan nilai x dan y!`;
-  document.getElementById("dynamic-soal").innerHTML = soalText;
-
-  // Hitung jawaban benar
-  const jawabanX = (a + b) / 2;
-  const jawabanY = a - jawabanX;
-
-  // Simpan jawaban
-  window.correctDynamic = `x = ${jawabanX}, y = ${jawabanY}`;
-
-  // Buat opsi jawaban acak
-  const pilihan = shuffle([
-    `x = ${jawabanX}, y = ${jawabanY}`,                       // benar
-    `x = ${jawabanX + 1}, y = ${jawabanY - 1}`,
-    `x = ${jawabanX - 1}, y = ${jawabanY + 1}`,
-    `x = ${jawabanY}, y = ${jawabanX}`                        // jebakan
-  ]);
-
-  const radios = document.getElementsByName("q2");
-  for (let i = 0; i < radios.length; i++) {
-    radios[i].nextSibling.textContent = ` ${String.fromCharCode(65 + i)}. ${pilihan[i]}`;
-    radios[i].setAttribute("data-value", pilihan[i]);
-  }
-}
-
-function checkDynamic() {
-  const radios = document.getElementsByName("q2");
-  let selected = null;
-  for (let r of radios) {
-    if (r.checked) selected = r.getAttribute("data-value");
-  }
-
-  const feedback = document.getElementById("dynamic-feedback");
-
-  if (!selected) {
-    feedback.textContent = "⚠️ Silakan pilih jawaban terlebih dahulu.";
-    feedback.style.color = "orange";
-    return;
-  }
-
-  if (selected === window.correctDynamic) {
-    feedback.innerHTML = "✅ Jawaban benar!<br>Langkah:<br>" +
-      "<ul><li>Jumlahkan kedua persamaan: <code>2x = (x + y) + (x - y) = a + b</code></li>" +
-      `<li><code>x = (a + b) / 2 = ${window.correctDynamic.split(",")[0].split("=")[1]}</code></li>` +
-      `<li><code>y = a - x = ${window.correctDynamic.split(",")[1].split("=")[1]}</code></li></ul>`;
-    feedback.style.color = "green";
-  } else {
-    feedback.innerHTML = "❌ Jawaban salah.<br>" +
-      "Gunakan eliminasi:<br>" +
-      "<code>x + y = a</code> dan <code>x - y = b</code><br>" +
-      "Jumlahkan kedua persamaan: <code>2x = a + b → x = (a + b)/2</code><br>" +
-      "Kemudian <code>y = a - x</code>";
-    feedback.style.color = "red";
-  }
-}
-
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-// Panggil saat halaman dimuat
-generateSoal();
-
-  <script>
-// === SOAL DINAMIS DENGAN PEMBAHASAN ===
-
-function generateSoal() {
-  const x = Math.floor(Math.random() * 4 + 2);  // x antara 2–5
-  const y = Math.floor(Math.random() * 4 + 1);  // y antara 1–4
-  const a = x + y;
-  const b = x - y;
-
-  const soalText = `Diketahui SPLDV:<br><strong>x + y = ${a}</strong><br><strong>x - y = ${b}</strong><br>Tentukan nilai x dan y!`;
-  document.getElementById("dynamic-soal").innerHTML = soalText;
-
-  // Hitung jawaban benar
-  const jawabanX = (a + b) / 2;
-  const jawabanY = a - jawabanX;
-
-  // Simpan jawaban
-  window.correctDynamic = `x = ${jawabanX}, y = ${jawabanY}`;
-
-  // Buat opsi jawaban acak
-  const pilihan = shuffle([
-    `x = ${jawabanX}, y = ${jawabanY}`,                       // benar
-    `x = ${jawabanX + 1}, y = ${jawabanY - 1}`,
-    `x = ${jawabanX - 1}, y = ${jawabanY + 1}`,
-    `x = ${jawabanY}, y = ${jawabanX}`                        // jebakan
-  ]);
-
-  const radios = document.getElementsByName("q2");
-  for (let i = 0; i < radios.length; i++) {
-    radios[i].nextSibling.textContent = ` ${String.fromCharCode(65 + i)}. ${pilihan[i]}`;
-    radios[i].setAttribute("data-value", pilihan[i]);
-  }
-}
-
-function checkDynamic() {
-  const radios = document.getElementsByName("q2");
-  let selected = null;
-  for (let r of radios) {
-    if (r.checked) selected = r.getAttribute("data-value");
-  }
-
-  const feedback = document.getElementById("dynamic-feedback");
-
-  if (!selected) {
-    feedback.textContent = "⚠️ Silakan pilih jawaban terlebih dahulu.";
-    feedback.style.color = "orange";
-    return;
-  }
-
-  if (selected === window.correctDynamic) {
-    feedback.innerHTML = "✅ Jawaban benar!<br>Langkah:<br>" +
-      "<ul><li>Jumlahkan kedua persamaan: <code>2x = (x + y) + (x - y) = a + b</code></li>" +
-      `<li><code>x = (a + b) / 2 = ${window.correctDynamic.split(",")[0].split("=")[1]}</code></li>` +
-      `<li><code>y = a - x = ${window.correctDynamic.split(",")[1].split("=")[1]}</code></li></ul>`;
-    feedback.style.color = "green";
-  } else {
-    feedback.innerHTML = "❌ Jawaban salah.<br>" +
-      "Gunakan eliminasi:<br>" +
-      "<code>x + y = a</code> dan <code>x - y = b</code><br>" +
-      "Jumlahkan kedua persamaan: <code>2x = a + b → x = (a + b)/2</code><br>" +
-      "Kemudian <code>y = a - x</code>";
-    feedback.style.color = "red";
-  }
-}
-
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-// Panggil saat halaman dimuat
-generateSoal();
-
-</section>
-  <section id="latihan5">
-  <h2>🧠 Latihan 5 Soal Dinamis</h2>
-  <p>Kerjakan soal berikut. Klik "Cek Jawaban" untuk mengetahui pembahasan.</p>
-
-  <div id="soal-container"></div>
-</section>
-<script>
 function generateSingleSoal(index) {
   const x = Math.floor(Math.random() * 4 + 2);  // 2–5
   const y = Math.floor(Math.random() * 4 + 1);  // 1–4
@@ -600,9 +235,8 @@ function shuffle(array) {
 
 // Panggil saat halaman dimuat
 generate5Soal();
-  
+
 </script>
-  
 
 </body>
 </html>
