@@ -1,35 +1,189 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Pembelajaran SPLDV - Kelas 8 SMP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            background-color: white;
-            margin: 20px;
-            border-radius: 8px;
-        }
-        h2 {
-            color: #2c3e50;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        .footer {
-            text-align: center;
-            padding: 10px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media Pembelajaran SPLDV - Kelas 8 SMP</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+    }
+
+    header {
+      background-color: #34495e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #2ecc71;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    .accordion {
+      cursor: pointer;
+      background-color: #ecf0f1;
+      padding: 10px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      width: 100%;
+      margin: 5px 0;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .accordion:hover {
+      background-color: #d0d7de;
+    }
+
+    .panel {
+      padding: 10px 15px;
+      display: none;
+      background-color: #f9f9f9;
+      border-left: 4px solid #2ecc71;
+      margin-bottom: 10px;
+    }
+
+    .quiz {
+      margin-top: 15px;
+    }
+
+    .quiz label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      background-color: #bdc3c7;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Media Pembelajaran SPLDV</h1>
+  <p>Kelas 8 SMP</p>
+</header>
+
+<nav>
+  <a href="#tujuan">Tujuan</a>
+  <a href="#materi">Materi</a>
+  <a href="#contoh">Contoh</a>
+  <a href="#latihan">Latihan</a>
+</nav>
+
+<section id="tujuan">
+  <h2>🎯 Tujuan Pembelajaran</h2>
+  <ul>
+    <li>Memahami pengertian SPLDV.</li>
+    <li>Menguasai metode penyelesaian SPLDV.</li>
+    <li>Menerapkan SPLDV pada kehidupan sehari-hari.</li>
+  </ul>
+</section>
+
+<section id="materi">
+  <h2>📘 Materi SPLDV</h2>
+  <p>SPLDV adalah dua persamaan linear dengan dua variabel, contohnya:</p>
+  <pre>2x + 3y = 12
+x - y = 4</pre>
+
+  <button class="accordion">Metode Grafik</button>
+  <div class="panel">
+    Gambar kedua persamaan di bidang kartesius. Titik potongnya adalah solusi SPLDV.
+  </div>
+
+  <button class="accordion">Metode Substitusi</button>
+  <div class="panel">
+    Ubah salah satu persamaan menjadi x atau y, lalu masukkan ke persamaan lainnya.
+  </div>
+
+  <button class="accordion">Metode Eliminasi</button>
+  <div class="panel">
+    Samakan koefisien variabel, lalu tambahkan/kurangkan untuk menghilangkan salah satu variabel.
+  </div>
+</section>
+
+<section id="contoh">
+  <h2>🧠 Contoh Soal</h2>
+  <p>Pak Andi membeli 2 pensil dan 3 buku seharga Rp18.000. Bu Rina membeli 1 pensil dan 2 buku seharga Rp11.000.</p>
+  <p><strong>Pertanyaan:</strong> Berapa harga satu pensil dan satu buku?</p>
+</section>
+
+<section id="latihan">
+  <h2>📝 Latihan Interaktif</h2>
+  <p><strong>Soal:</strong> Jika x + y = 10 dan x - y = 2, maka x = ...</p>
+  <div class="quiz">
+    <label><input type="radio" name="q1" value="8"> A. 8</label>
+    <label><input type="radio" name="q1" value="6"> B. 6</label>
+    <label><input type="radio" name="q1" value="5"> C. 5</label>
+    <label><input type="radio" name="q1" value="4"> D. 4</label>
+    <button onclick="checkAnswer()">Cek Jawaban</button>
+    <p id="feedback"></p>
+  </div>
+</section>
+
+<div class="footer">
+  &copy; 2025 | Media SPLDV oleh Tim EduSMP
+</div>
+
+<script>
+  // Accordion logic
+  const acc = document.querySelectorAll(".accordion");
+  acc.forEach(button => {
+    button.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  });
+
+  // Quiz logic
+  function checkAnswer() {
+    const radios = document.getElementsByName("q1");
+    let selected;
+    for (let r of radios) {
+      if (r.checked) selected = r.value;
+    }
+    const feedback = document.getElementById("feedback");
+    if (selected === "6") {
+      feedback.textContent = "✅ Jawaban benar! x = 6 dan y = 4.";
+      feedback.style.color = "green";
+    } else {
+      feedback.textContent = "❌ Jawaban salah. Coba lagi!";
+      feedback.style.color = "red";
+    }
+  }
+</script>
+
+</body>
+</html>
